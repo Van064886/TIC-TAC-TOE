@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="38dp"
+        app:srcCompat="@drawable/logo2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="monospace"
+        android:foregroundTint="#FFFFFF"
+        android:gravity="center"
+        android:text="Tic Tac Toe"
+        android:textColor="@color/white"
+        android:textSize="@dimen/presentationSize" />
+
+    <Button
+        android:id="@+id/jouerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="monospace"
+        android:text="JOUER"
+        android:textSize="@dimen/presentationSize"
+        android:onClick="onJouer"
+        />
+
+    <Button
+        android:id="@+id/scoresBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="monospace"
+        android:text="Scores"
+        android:textSize="@dimen/presentationSize"
+        android:onClick="onScore"
+        />
+
+    <Button
+        android:id="@+id/quitterBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Quitter"
+        android:textSize="@dimen/presentationSize"
+        android:onClick="onQuitter"/>
+
+
+</LinearLayout>

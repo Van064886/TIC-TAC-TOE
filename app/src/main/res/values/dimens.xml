@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="presentationSize">25dp</dimen>
+    <dimen name="btnSize">45dp</dimen>
+    <dimen name="basic">18dp</dimen>
+</resources>

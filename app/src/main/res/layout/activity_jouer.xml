@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".jouerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#000000"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="Joueur 1 : X"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/presentationSize" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:padding="10dp"
+            android:text="Joueur 2 : O"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/presentationSize" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="-550dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:textSize="@dimen/btnSize"
+            android:layout_margin="9dp"
+            android:layout_weight="1"
+            android:backgroundTint="#151515"
+            android:textColor="@color/white"
+            android:onClick="gameControl"
+            />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/btnSize"
+            android:layout_margin="9dp"
+            android:backgroundTint="#151515"
+            android:textColor="@color/white"
+            android:onClick="gameControl"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/btnSize"
+            android:layout_margin="9dp"
+            android:backgroundTint="#151515"
+            android:textColor="@color/white"
+            android:onClick="gameControl"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:textSize="@dimen/btnSize"
+            android:layout_margin="9dp"
+            android:layout_weight="1"
+            android:backgroundTint="#151515"
+            android:textColor="@color/white"
+            android:onClick="gameControl"
+            />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/btnSize"
+            android:layout_margin="9dp"
+            android:backgroundTint="#151515"
+            android:textColor="@color/white"
+            android:onClick="gameControl"/>
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/btnSize"
+            android:layout_margin="9dp"
+            android:backgroundTint="#151515"
+            android:textColor="@color/white"
+            android:onClick="gameControl"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:textSize="@dimen/btnSize"
+            android:layout_margin="9dp"
+            android:layout_weight="1"
+            android:backgroundTint="#151515"
+            android:textColor="@color/white"
+            android:onClick="gameControl"
+            />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/btnSize"
+            android:layout_margin="9dp"
+            android:backgroundTint="#151515"
+            android:textColor="@color/white"
+            android:onClick="gameControl"/>
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/btnSize"
+            android:layout_margin="9dp"
+            android:backgroundTint="#151515"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</LinearLayout>
