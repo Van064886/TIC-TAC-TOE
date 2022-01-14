@@ -2,10 +2,12 @@ package Van064886.tictactoetrain;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class jouerActivity extends AppCompatActivity
@@ -21,8 +23,11 @@ public class jouerActivity extends AppCompatActivity
     private Button btnC2;
     private Button btnC3;
 
+    // Déclaration du bouton retour
+    private Button retourBtn ;
+
     // Déclaration du symbole a inscire
-    private static String symbol = "O";
+    private static String symbol = "0";
 
     // Déclaration du booléén continuer
     private static boolean continuer = true;
@@ -32,7 +37,7 @@ public class jouerActivity extends AppCompatActivity
     {
         // Gestion de la saisie
         if ( symbol == "X" )
-            symbol = "O";
+            symbol = "0";
         else
             symbol = "X";
 
@@ -232,6 +237,22 @@ public class jouerActivity extends AppCompatActivity
                     Toast.LENGTH_SHORT).show();
         }
 
+        // Création d'un bouton pour rediriger les joueurs vers la page prinicpale
+        if (!continuer)
+        {
+            continuer = true;
+            retourBtn.setVisibility(View.VISIBLE);
+            retourBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Retour a la page d'acceuil
+                    Intent acceuil = new Intent( getApplicationContext() , MainActivity.class );
+                    startActivity(acceuil);
+                    finish();
+                }
+            });
+        }
+
     }
 
     @Override
@@ -239,6 +260,10 @@ public class jouerActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jouer);
+
+        // Définition du layout contenant le bouton retour
+        retourBtn = findViewById(R.id.retourBtn);
+        retourBtn.setVisibility(View.INVISIBLE);
 
         // Gestion des évènements
         btnA1 = findViewById(R.id.btn1);
