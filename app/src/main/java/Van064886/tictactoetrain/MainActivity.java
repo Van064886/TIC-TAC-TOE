@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity
 
     public void onJouer(View view)
     {
-        Intent jouerA = new Intent(getApplicationContext() , jouerActivity.class );
+        Intent jouerA = new Intent(getApplicationContext() , playersName.class );
         startActivity(jouerA);
         finish();
     }

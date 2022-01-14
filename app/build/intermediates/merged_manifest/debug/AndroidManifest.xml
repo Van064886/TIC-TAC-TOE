@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToeTrain" >
         <activity
+            android:name="Van064886.tictactoetrain.playersName"
+            android:exported="true" />
+        <activity
             android:name="Van064886.tictactoetrain.scoreActivity"
             android:exported="true" />
         <activity

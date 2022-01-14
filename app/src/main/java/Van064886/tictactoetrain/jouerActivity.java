@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class jouerActivity extends AppCompatActivity
@@ -22,6 +23,10 @@ public class jouerActivity extends AppCompatActivity
     private Button btnC1;
     private Button btnC2;
     private Button btnC3;
+
+    // Déclaration des textviews de nom de joueur
+    private TextView joueur1Text;
+    private TextView joueur2Text;
 
     // Déclaration du bouton retour
     private Button retourBtn ;
@@ -44,39 +49,39 @@ public class jouerActivity extends AppCompatActivity
         switch ( name )
         {
             case "btn1" :
-                if (continuer)
+                if (btnA1.getText() == "" && continuer)
                     btnA1.setText(symbol);
                 break;
             case "btn2" :
-                if (continuer)
+                if (btnA2.getText() == "" && continuer)
                     btnA2.setText(symbol);
                 break;
             case "btn3" :
-                if (continuer)
+                if (btnA3.getText() == "" && continuer)
                     btnA3.setText(symbol);
                 break;
             case "btn4" :
-                if (continuer)
+                if (btnB1.getText() == "" && continuer)
                     btnB1.setText(symbol);
                 break;
             case "btn5" :
-                if (continuer)
+                if (btnB2.getText() == "" && continuer)
                     btnB2.setText(symbol);
                 break;
             case "btn6" :
-                if (continuer)
+                if (btnB3.getText() == "" && continuer)
                     btnB3.setText(symbol);
                 break;
             case "btn7" :
-                if (continuer)
+                if (btnC1.getText() == "" && continuer)
                     btnC1.setText(symbol);
                 break;
             case "btn8" :
-                if (continuer)
+                if (btnC2.getText() == "" && continuer)
                     btnC2.setText(symbol);
                 break;
             case "btn9" :
-                if (continuer)
+                if (btnC3.getText() == "" && continuer)
                     btnC3.setText(symbol);
                 break;
             default:
@@ -240,11 +245,14 @@ public class jouerActivity extends AppCompatActivity
         // Création d'un bouton pour rediriger les joueurs vers la page prinicpale
         if (!continuer)
         {
-            continuer = true;
             retourBtn.setVisibility(View.VISIBLE);
             retourBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(View v)
+                {
+                    // On reinitialise continuer a true
+                    continuer = true;
+
                     // Retour a la page d'acceuil
                     Intent acceuil = new Intent( getApplicationContext() , MainActivity.class );
                     startActivity(acceuil);
@@ -260,6 +268,19 @@ public class jouerActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jouer);
+
+        // Récupération des variables de noms stockés dans l'activité précédente
+        Intent nameActivity = getIntent();
+        String nomJoueur1 = nameActivity.getStringExtra("joueur1Name");
+        String nomJoueur2 = nameActivity.getStringExtra("joueur2Name");
+
+        // Définition des text views de nom d'utilisateur
+        joueur1Text = findViewById(R.id.textJoueur1);
+        joueur2Text = findViewById(R.id.textJoueur2);
+
+        // Insertion des noms de joueurs dans les text views
+        joueur1Text.setText(nomJoueur1);
+        joueur2Text.setText(nomJoueur2);
 
         // Définition du layout contenant le bouton retour
         retourBtn = findViewById(R.id.retourBtn);

@@ -1,7 +1,12 @@
+Van064886/tictactoetrain/MainActivity.java
+ Van064886.tictactoetrain.MainActivity
 Van064886/tictactoetrain/scoreActivity.java
  Van064886.tictactoetrain.scoreActivity
 Van064886/tictactoetrain/BuildConfig.java
  Van064886.tictactoetrain.BuildConfig
+Van064886/tictactoetrain/playersName.java
+ Van064886.tictactoetrain.playersName
+ Van064886.tictactoetrain.playersName$1
 Van064886/tictactoetrain/jouerActivity.java
  Van064886.tictactoetrain.jouerActivity
  Van064886.tictactoetrain.jouerActivity$1
@@ -14,5 +19,3 @@ Van064886/tictactoetrain/jouerActivity.java
  Van064886.tictactoetrain.jouerActivity$7
  Van064886.tictactoetrain.jouerActivity$8
  Van064886.tictactoetrain.jouerActivity$9
-Van064886/tictactoetrain/MainActivity.java
- Van064886.tictactoetrain.MainActivity

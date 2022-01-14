@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToeTrain">
         <activity
+            android:name=".playersName"
+            android:exported="true" />
+        <activity
             android:name=".scoreActivity"
             android:exported="true" />
         <activity

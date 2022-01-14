@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-29:12
+ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-32:12
 MERGED from [com.google.android.material:material:1.4.0] /home/van/.gradle/caches/transforms-3/25012fcc08d4c5cf5a2844c1a21a6fbe/transformed/material-1.4.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] /home/van/.gradle/caches/transforms-3/a11786a4a7d57dd01c1941ec7e43bc28/transformed/constraintlayout-2.1.2/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.4.0] /home/van/.gradle/caches/transforms-3/b6875e6c8278ccf12a9733441eb70c4c/transformed/appcompat-1.4.0/AndroidManifest.xml:17:1-24:12
@@ -43,25 +43,25 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/van/.gradle/caches/
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/van/.gradle/caches/transforms-3/8ca7186ef83368b8549809152ed428ce/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/van/.gradle/caches/transforms-3/485578c608519582fc751ff2f7c88476/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/van/.gradle/caches/transforms-3/437e772228a813b0fd4bde3f8ec9dd31/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml
 		INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml
-		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-29:12
+		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-32:12
 		INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml
-		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-29:12
+		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:1-32:12
 		INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:5:5-27:19
+ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:5:5-30:19
 MERGED from [com.google.android.material:material:1.4.0] /home/van/.gradle/caches/transforms-3/25012fcc08d4c5cf5a2844c1a21a6fbe/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] /home/van/.gradle/caches/transforms-3/25012fcc08d4c5cf5a2844c1a21a6fbe/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.2] /home/van/.gradle/caches/transforms-3/a11786a4a7d57dd01c1941ec7e43bc28/transformed/constraintlayout-2.1.2/AndroidManifest.xml:9:5-20
@@ -90,34 +90,40 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /home/van/.gradle/caches/tr
 		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:11:9-52
-activity#Van064886.tictactoetrain.scoreActivity
+activity#Van064886.tictactoetrain.playersName
 ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:12:9-14:39
 	android:exported
 		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:14:13-36
 	android:name
-		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:13:13-42
-activity#Van064886.tictactoetrain.jouerActivity
+		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:13:13-40
+activity#Van064886.tictactoetrain.scoreActivity
 ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:15:9-17:39
 	android:exported
 		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:17:13-36
 	android:name
 		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:16:13-42
-activity#Van064886.tictactoetrain.MainActivity
-ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:18:9-26:20
+activity#Van064886.tictactoetrain.jouerActivity
+ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:18:9-20:39
 	android:exported
 		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:20:13-36
 	android:name
-		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:19:13-41
+		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:19:13-42
+activity#Van064886.tictactoetrain.MainActivity
+ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:21:9-29:20
+	android:exported
+		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:23:13-36
+	android:name
+		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:22:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:21:13-25:29
+ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:22:17-69
+ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:22:25-66
+		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:24:17-77
+ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:24:27-74
+		ADDED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:27:27-74
 uses-sdk
 INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml
