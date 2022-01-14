@@ -55,7 +55,6 @@
             android:layout_weight="1"
             android:backgroundTint="#151515"
             android:textColor="@color/white"
-            android:onClick="gameControl"
             />
 
         <Button
@@ -66,8 +65,7 @@
             android:textSize="@dimen/btnSize"
             android:layout_margin="9dp"
             android:backgroundTint="#151515"
-            android:textColor="@color/white"
-            android:onClick="gameControl"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn3"
@@ -77,8 +75,7 @@
             android:textSize="@dimen/btnSize"
             android:layout_margin="9dp"
             android:backgroundTint="#151515"
-            android:textColor="@color/white"
-            android:onClick="gameControl"/>
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <LinearLayout
@@ -96,7 +93,6 @@
             android:layout_weight="1"
             android:backgroundTint="#151515"
             android:textColor="@color/white"
-            android:onClick="gameControl"
             />
 
         <Button
@@ -107,8 +103,7 @@
             android:textSize="@dimen/btnSize"
             android:layout_margin="9dp"
             android:backgroundTint="#151515"
-            android:textColor="@color/white"
-            android:onClick="gameControl"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn6"
@@ -118,8 +113,7 @@
             android:textSize="@dimen/btnSize"
             android:layout_margin="9dp"
             android:backgroundTint="#151515"
-            android:textColor="@color/white"
-            android:onClick="gameControl"/>
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <LinearLayout
@@ -137,7 +131,6 @@
             android:layout_weight="1"
             android:backgroundTint="#151515"
             android:textColor="@color/white"
-            android:onClick="gameControl"
             />
 
         <Button
@@ -148,8 +141,7 @@
             android:textSize="@dimen/btnSize"
             android:layout_margin="9dp"
             android:backgroundTint="#151515"
-            android:textColor="@color/white"
-            android:onClick="gameControl"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btn9"

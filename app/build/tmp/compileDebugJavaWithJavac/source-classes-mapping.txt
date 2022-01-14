@@ -4,5 +4,14 @@ Van064886/tictactoetrain/BuildConfig.java
  Van064886.tictactoetrain.BuildConfig
 Van064886/tictactoetrain/jouerActivity.java
  Van064886.tictactoetrain.jouerActivity
+ Van064886.tictactoetrain.jouerActivity$1
+ Van064886.tictactoetrain.jouerActivity$2
+ Van064886.tictactoetrain.jouerActivity$3
+ Van064886.tictactoetrain.jouerActivity$4
+ Van064886.tictactoetrain.jouerActivity$5
+ Van064886.tictactoetrain.jouerActivity$6
+ Van064886.tictactoetrain.jouerActivity$7
+ Van064886.tictactoetrain.jouerActivity$8
+ Van064886.tictactoetrain.jouerActivity$9
 Van064886/tictactoetrain/MainActivity.java
  Van064886.tictactoetrain.MainActivity
