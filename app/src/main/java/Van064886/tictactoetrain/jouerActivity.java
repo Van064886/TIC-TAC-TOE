@@ -28,6 +28,10 @@ public class jouerActivity extends AppCompatActivity
     private TextView joueur1Text;
     private TextView joueur2Text;
 
+    // Déclaration des textViews de symbols
+    private TextView symbolX;
+    private TextView symbolO;
+
     // Déclaration du bouton retour
     private Button retourBtn ;
 
@@ -36,6 +40,13 @@ public class jouerActivity extends AppCompatActivity
 
     // Déclaration du booléén continuer
     private static boolean continuer = true;
+
+    // Déclaration des variables nom de joueurs à utiliser
+    private static String nomJoueur1;
+    private static String nomJoueur2;
+
+    // Message de succès
+    private String successMsg = "a gagné";
 
     // Fonctions
     public  void gameFunction( View v , String name )
@@ -46,6 +57,30 @@ public class jouerActivity extends AppCompatActivity
         else
             symbol = "X";
 
+        // Gestion d'effets sur les noms de joueurs suivant la valeur de symbol
+        if ( symbol == "X" )
+        {
+            // On ramène la coloration du coté de joueur 1 au blanc
+            joueur1Text.setTextColor(Color.WHITE);
+            symbolX.setTextColor(Color.WHITE);
+
+            // On met la coloration du joueur 2 au violet
+            joueur2Text.setTextColor(Color.parseColor("#1C0C42"));
+            symbolO.setTextColor(Color.parseColor("#1C0C42"));
+        }
+        else if ( symbol == "0" )
+        {
+            // On ramène la coloration du coté de joueur 2 au blanc
+            joueur2Text.setTextColor(Color.WHITE);
+            symbolO.setTextColor(Color.WHITE);
+
+            // On met la coloration du joueur 1 au violet
+            joueur1Text.setTextColor(Color.parseColor("#1C0C42"));
+            symbolX.setTextColor(Color.parseColor("#1C0C42"));
+        }
+
+
+        // Ecriture dans le bouton
         switch ( name )
         {
             case "btn1" :
@@ -105,8 +140,21 @@ public class jouerActivity extends AppCompatActivity
             continuer = false;
 
             // Message de succès
-            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
-                    Toast.LENGTH_SHORT).show();
+            if ( btnA1.getText().toString() == "X" && btnB1.getText().toString() == "X"  &&
+                    btnC1.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
+            else if ( btnA1.getText().toString() == "0" &&
+                    btnB1.getText().toString() == "0" && btnC1.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
+
         }
         if ( ( btnA2.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
                 btnC2.getText().toString() == "X" ) || ( btnA2.getText().toString() == "0" &&
@@ -124,8 +172,21 @@ public class jouerActivity extends AppCompatActivity
             continuer = false;
 
             // Message de succès
-            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
-                    Toast.LENGTH_SHORT).show();
+            if ( btnA2.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                    btnC2.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
+            else if ( btnA2.getText().toString() == "0" &&
+                    btnB2.getText().toString() == "0" && btnC2.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
+
         }
         if ( ( btnA3.getText().toString() == "X" && btnB3.getText().toString() == "X"  &&
                 btnC3.getText().toString() == "X" ) || ( btnA3.getText().toString() == "0" &&
@@ -143,8 +204,20 @@ public class jouerActivity extends AppCompatActivity
             continuer = false;
 
             // Message de succès
-            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
-                    Toast.LENGTH_SHORT).show();
+            if ( btnA3.getText().toString() == "X" && btnB3.getText().toString() == "X"  &&
+                    btnC3.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
+            else if ( btnA3.getText().toString() == "0" &&
+                    btnB3.getText().toString() == "0" && btnC3.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
         }
         if ( ( btnA1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
                 btnC3.getText().toString() == "X" ) || ( btnA1.getText().toString() == "0" &&
@@ -162,8 +235,20 @@ public class jouerActivity extends AppCompatActivity
             continuer = false;
 
             // Message de succès
-            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
-                    Toast.LENGTH_SHORT).show();
+            if ( btnA1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                    btnC3.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
+            else if ( btnA1.getText().toString() == "0" &&
+                    btnB2.getText().toString() == "0" && btnC3.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
         }
         if ( ( btnA3.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
                 btnC1.getText().toString() == "X" ) || ( btnA3.getText().toString() == "0" &&
@@ -181,8 +266,20 @@ public class jouerActivity extends AppCompatActivity
             continuer = false;
 
             // Message de succès
-            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
-                    Toast.LENGTH_SHORT).show();
+            if ( btnA3.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                    btnC1.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
+            else if ( btnA3.getText().toString() == "0" &&
+                    btnB2.getText().toString() == "0" && btnC1.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
         }
         if ( ( btnA1.getText().toString() == "X" && btnA2.getText().toString() == "X"  &&
                 btnA3.getText().toString() == "X" ) || ( btnA1.getText().toString() == "0" &&
@@ -200,8 +297,20 @@ public class jouerActivity extends AppCompatActivity
             continuer = false;
 
             // Message de succès
-            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
-                    Toast.LENGTH_SHORT).show();
+            if ( btnA1.getText().toString() == "X" && btnA2.getText().toString() == "X"  &&
+                    btnA3.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
+            else if ( btnA1.getText().toString() == "0" &&
+                    btnA2.getText().toString() == "0" && btnA3.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
         }
         if ( ( btnB1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
                 btnB3.getText().toString() == "X" ) || ( btnB1.getText().toString() == "0" &&
@@ -219,8 +328,20 @@ public class jouerActivity extends AppCompatActivity
             continuer = false;
 
             // Message de succès
-            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
-                    Toast.LENGTH_SHORT).show();
+            if ( btnB1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                    btnB3.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
+            else if ( btnB1.getText().toString() == "0" &&
+                    btnB2.getText().toString() == "0" && btnB3.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
         }
         if ( ( btnC1.getText().toString() == "X" && btnC2.getText().toString() == "X"  &&
                 btnC3.getText().toString() == "X" ) || ( btnC1.getText().toString() == "0" &&
@@ -238,8 +359,20 @@ public class jouerActivity extends AppCompatActivity
             continuer = false;
 
             // Message de succès
-            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
-                    Toast.LENGTH_SHORT).show();
+            if ( btnC1.getText().toString() == "X" && btnC2.getText().toString() == "X"  &&
+                    btnC3.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
+            else if ( btnC1.getText().toString() == "0" &&
+                    btnC2.getText().toString() == "0" && btnC3.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                Toast.makeText(getApplicationContext() ,  successMsg ,
+                        Toast.LENGTH_SHORT).show();
+            }
         }
 
         // Création d'un bouton pour rediriger les joueurs vers la page prinicpale
@@ -271,8 +404,8 @@ public class jouerActivity extends AppCompatActivity
 
         // Récupération des variables de noms stockés dans l'activité précédente
         Intent nameActivity = getIntent();
-        String nomJoueur1 = nameActivity.getStringExtra("joueur1Name");
-        String nomJoueur2 = nameActivity.getStringExtra("joueur2Name");
+        nomJoueur1 = nameActivity.getStringExtra("joueur1Name");
+        nomJoueur2 = nameActivity.getStringExtra("joueur2Name");
 
         // Définition des text views de nom d'utilisateur
         joueur1Text = findViewById(R.id.textJoueur1);
@@ -281,6 +414,10 @@ public class jouerActivity extends AppCompatActivity
         // Insertion des noms de joueurs dans les text views
         joueur1Text.setText(nomJoueur1);
         joueur2Text.setText(nomJoueur2);
+
+        // Définition des text views de symbols
+        symbolX = findViewById(R.id.symbolX);
+        symbolO = findViewById(R.id.symbolO);
 
         // Définition du layout contenant le bouton retour
         retourBtn = findViewById(R.id.retourBtn);
