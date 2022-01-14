@@ -24,13 +24,12 @@ public class jouerActivity extends AppCompatActivity
     // Déclaration du symbole a inscire
     private static String symbol = "O";
 
+    // Déclaration du booléén continuer
+    private static boolean continuer = true;
+
     // Fonctions
     public  void gameFunction( View v , String name )
     {
-        boolean continuer = true;
-        Toast.makeText(getApplicationContext(),
-                "You clicked on ", Toast.LENGTH_SHORT).show();
-
         // Gestion de la saisie
         if ( symbol == "X" )
             symbol = "O";
