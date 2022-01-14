@@ -27,8 +27,57 @@ public class jouerActivity extends AppCompatActivity
     // Fonctions
     public  void gameFunction( View v , String name )
     {
+        boolean continuer = true;
         Toast.makeText(getApplicationContext(),
                 "You clicked on ", Toast.LENGTH_SHORT).show();
+
+        // Gestion de la saisie
+        if ( symbol == "X" )
+            symbol = "O";
+        else
+            symbol = "X";
+
+        switch ( name )
+        {
+            case "btn1" :
+                if (continuer)
+                    btnA1.setText(symbol);
+                break;
+            case "btn2" :
+                if (continuer)
+                    btnA2.setText(symbol);
+                break;
+            case "btn3" :
+                if (continuer)
+                    btnA3.setText(symbol);
+                break;
+            case "btn4" :
+                if (continuer)
+                    btnB1.setText(symbol);
+                break;
+            case "btn5" :
+                if (continuer)
+                    btnB2.setText(symbol);
+                break;
+            case "btn6" :
+                if (continuer)
+                    btnB3.setText(symbol);
+                break;
+            case "btn7" :
+                if (continuer)
+                    btnC1.setText(symbol);
+                break;
+            case "btn8" :
+                if (continuer)
+                    btnC2.setText(symbol);
+                break;
+            case "btn9" :
+                if (continuer)
+                    btnC3.setText(symbol);
+                break;
+            default:
+                break;
+        }
 
         // Verification de la fin de jeu
         if ( ( btnA1.getText().toString() == "X" && btnB1.getText().toString() == "X"  &&
@@ -43,47 +92,147 @@ public class jouerActivity extends AppCompatActivity
             btnC1.setBackgroundColor(Color.WHITE);
             btnC1.setTextColor(Color.BLACK);
 
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
+                    Toast.LENGTH_SHORT).show();
         }
-
-
-        // Gestion de la saisie
-        if ( symbol == "X" )
-            symbol = "O";
-        else
-            symbol = "X";
-
-        switch ( name )
+        if ( ( btnA2.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                btnC2.getText().toString() == "X" ) || ( btnA2.getText().toString() == "0" &&
+                btnB2.getText().toString() == "0" && btnC2.getText().toString() == "0" )  )
         {
-            case "btn1" :
-                btnA1.setText(symbol);
-                break;
-            case "btn2" :
-                btnA2.setText(symbol);
-                break;
-            case "btn3" :
-                btnA3.setText(symbol);
-                break;
-            case "btn4" :
-                btnB1.setText(symbol);
-                break;
-            case "btn5" :
-                btnB2.setText(symbol);
-                break;
-            case "btn6" :
-                btnB3.setText(symbol);
-                break;
-            case "btn7" :
-                btnC1.setText(symbol);
-                break;
-            case "btn8" :
-                btnC2.setText(symbol);
-                break;
-            case "btn9" :
-                btnC3.setText(symbol);
-                break;
-            default:
-                break;
+            // Modification de la couleur des textes et du background du boutton
+            btnA2.setBackgroundColor(Color.WHITE);
+            btnA2.setTextColor(Color.BLACK);
+            btnB2.setBackgroundColor(Color.WHITE);
+            btnB2.setTextColor(Color.BLACK);
+            btnC2.setBackgroundColor(Color.WHITE);
+            btnC2.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
+                    Toast.LENGTH_SHORT).show();
         }
+        if ( ( btnA3.getText().toString() == "X" && btnB3.getText().toString() == "X"  &&
+                btnC3.getText().toString() == "X" ) || ( btnA3.getText().toString() == "0" &&
+                btnB3.getText().toString() == "0" && btnC3.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnA3.setBackgroundColor(Color.WHITE);
+            btnA3.setTextColor(Color.BLACK);
+            btnB3.setBackgroundColor(Color.WHITE);
+            btnB3.setTextColor(Color.BLACK);
+            btnC3.setBackgroundColor(Color.WHITE);
+            btnC3.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
+                    Toast.LENGTH_SHORT).show();
+        }
+        if ( ( btnA1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                btnC3.getText().toString() == "X" ) || ( btnA1.getText().toString() == "0" &&
+                btnB2.getText().toString() == "0" && btnC3.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnA1.setBackgroundColor(Color.WHITE);
+            btnA1.setTextColor(Color.BLACK);
+            btnB2.setBackgroundColor(Color.WHITE);
+            btnB2.setTextColor(Color.BLACK);
+            btnC3.setBackgroundColor(Color.WHITE);
+            btnC3.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
+                    Toast.LENGTH_SHORT).show();
+        }
+        if ( ( btnA3.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                btnC1.getText().toString() == "X" ) || ( btnA3.getText().toString() == "0" &&
+                btnB2.getText().toString() == "0" && btnC1.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnA3.setBackgroundColor(Color.WHITE);
+            btnA3.setTextColor(Color.BLACK);
+            btnB2.setBackgroundColor(Color.WHITE);
+            btnB2.setTextColor(Color.BLACK);
+            btnC1.setBackgroundColor(Color.WHITE);
+            btnC1.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
+                    Toast.LENGTH_SHORT).show();
+        }
+        if ( ( btnA1.getText().toString() == "X" && btnA2.getText().toString() == "X"  &&
+                btnA3.getText().toString() == "X" ) || ( btnA1.getText().toString() == "0" &&
+                btnA2.getText().toString() == "0" && btnA3.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnA1.setBackgroundColor(Color.WHITE);
+            btnA1.setTextColor(Color.BLACK);
+            btnA2.setBackgroundColor(Color.WHITE);
+            btnA2.setTextColor(Color.BLACK);
+            btnA3.setBackgroundColor(Color.WHITE);
+            btnA3.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
+                    Toast.LENGTH_SHORT).show();
+        }
+        if ( ( btnB1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                btnB3.getText().toString() == "X" ) || ( btnB1.getText().toString() == "0" &&
+                btnB2.getText().toString() == "0" && btnB3.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnB1.setBackgroundColor(Color.WHITE);
+            btnB1.setTextColor(Color.BLACK);
+            btnB2.setBackgroundColor(Color.WHITE);
+            btnB2.setTextColor(Color.BLACK);
+            btnB3.setBackgroundColor(Color.WHITE);
+            btnB3.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
+                    Toast.LENGTH_SHORT).show();
+        }
+        if ( ( btnC1.getText().toString() == "X" && btnC2.getText().toString() == "X"  &&
+                btnC3.getText().toString() == "X" ) || ( btnC1.getText().toString() == "0" &&
+                btnC2.getText().toString() == "0" && btnC3.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnC1.setBackgroundColor(Color.WHITE);
+            btnC1.setTextColor(Color.BLACK);
+            btnC2.setBackgroundColor(Color.WHITE);
+            btnC2.setTextColor(Color.BLACK);
+            btnC3.setBackgroundColor(Color.WHITE);
+            btnC3.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            Toast.makeText(getApplicationContext() , " Vous avez gagné " ,
+                    Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Override
