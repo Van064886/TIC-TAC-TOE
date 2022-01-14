@@ -41,7 +41,7 @@ public class jouerActivity extends AppCompatActivity
     // Déclaration du symbole a inscire
     private static String symbol = "0";
 
-    // Déclaration du booléén continuer
+    // Déclaration du booléen continuer
     private static boolean continuer = true;
 
     // Déclaration des variables nom de joueurs à utiliser
@@ -51,16 +51,33 @@ public class jouerActivity extends AppCompatActivity
     // Message de succès
     private String successMsg = "a gagné";
 
+    // Creation de la variable active qui contient la couleur justifiant le joueur actif
+    int active = Color.parseColor("#1C0C42");
+
     // Fonctions
-    public  void gameFunction( View v , String name )
+    public void symbolManager()
     {
-        // Gestion de la saisie
         if ( symbol == "X" )
             symbol = "0";
         else
             symbol = "X";
+    }
 
-        // Gestion d'effets sur les noms de joueurs suivant la valeur de symbol
+    public void gameMessage( String message )
+    {
+        Toast.makeText(getApplicationContext() ,  message ,
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public void gameInit()
+    {
+        continuer = true;
+        symbol = "0";
+    }
+
+    public void playerNamesManager()
+    {
+        // Modifications suivant la valeur de la variable symbol
         if ( symbol == "X" )
         {
             // On ramène la coloration du coté de joueur 1 au blanc
@@ -68,8 +85,8 @@ public class jouerActivity extends AppCompatActivity
             symbolX.setTextColor(Color.WHITE);
 
             // On met la coloration du joueur 2 au violet
-            joueur2Text.setTextColor(Color.parseColor("#1C0C42"));
-            symbolO.setTextColor(Color.parseColor("#1C0C42"));
+            joueur2Text.setTextColor(active);
+            symbolO.setTextColor(active);
         }
         else if ( symbol == "0" )
         {
@@ -78,12 +95,13 @@ public class jouerActivity extends AppCompatActivity
             symbolO.setTextColor(Color.WHITE);
 
             // On met la coloration du joueur 1 au violet
-            joueur1Text.setTextColor(Color.parseColor("#1C0C42"));
-            symbolX.setTextColor(Color.parseColor("#1C0C42"));
+            joueur1Text.setTextColor(active);
+            symbolX.setTextColor(active);
         }
+    }
 
-
-        // Ecriture dans le bouton
+    public void buttonValueProcessor( String name )
+    {
         switch ( name )
         {
             case "btn1" :
@@ -125,260 +143,10 @@ public class jouerActivity extends AppCompatActivity
             default:
                 break;
         }
+    }
 
-        // Verification de la fin de jeu
-        if ( ( btnA1.getText().toString() == "X" && btnB1.getText().toString() == "X"  &&
-                btnC1.getText().toString() == "X" ) || ( btnA1.getText().toString() == "0" &&
-                btnB1.getText().toString() == "0" && btnC1.getText().toString() == "0" )  )
-        {
-            // Modification de la couleur des textes et du background du boutton
-            btnA1.setBackgroundColor(Color.WHITE);
-            btnA1.setTextColor(Color.BLACK);
-            btnB1.setBackgroundColor(Color.WHITE);
-            btnB1.setTextColor(Color.BLACK);
-            btnC1.setBackgroundColor(Color.WHITE);
-            btnC1.setTextColor(Color.BLACK);
-
-            // On met continuer à false
-            continuer = false;
-
-            // Message de succès
-            if ( btnA1.getText().toString() == "X" && btnB1.getText().toString() == "X"  &&
-                    btnC1.getText().toString() == "X" )
-            {
-                successMsg = nomJoueur1 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-            else if ( btnA1.getText().toString() == "0" &&
-                    btnB1.getText().toString() == "0" && btnC1.getText().toString() == "0" )
-            {
-                successMsg = nomJoueur2 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-
-        }
-        if ( ( btnA2.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
-                btnC2.getText().toString() == "X" ) || ( btnA2.getText().toString() == "0" &&
-                btnB2.getText().toString() == "0" && btnC2.getText().toString() == "0" )  )
-        {
-            // Modification de la couleur des textes et du background du boutton
-            btnA2.setBackgroundColor(Color.WHITE);
-            btnA2.setTextColor(Color.BLACK);
-            btnB2.setBackgroundColor(Color.WHITE);
-            btnB2.setTextColor(Color.BLACK);
-            btnC2.setBackgroundColor(Color.WHITE);
-            btnC2.setTextColor(Color.BLACK);
-
-            // On met continuer à false
-            continuer = false;
-
-            // Message de succès
-            if ( btnA2.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
-                    btnC2.getText().toString() == "X" )
-            {
-                successMsg = nomJoueur1 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-            else if ( btnA2.getText().toString() == "0" &&
-                    btnB2.getText().toString() == "0" && btnC2.getText().toString() == "0" )
-            {
-                successMsg = nomJoueur2 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-
-        }
-        if ( ( btnA3.getText().toString() == "X" && btnB3.getText().toString() == "X"  &&
-                btnC3.getText().toString() == "X" ) || ( btnA3.getText().toString() == "0" &&
-                btnB3.getText().toString() == "0" && btnC3.getText().toString() == "0" )  )
-        {
-            // Modification de la couleur des textes et du background du boutton
-            btnA3.setBackgroundColor(Color.WHITE);
-            btnA3.setTextColor(Color.BLACK);
-            btnB3.setBackgroundColor(Color.WHITE);
-            btnB3.setTextColor(Color.BLACK);
-            btnC3.setBackgroundColor(Color.WHITE);
-            btnC3.setTextColor(Color.BLACK);
-
-            // On met continuer à false
-            continuer = false;
-
-            // Message de succès
-            if ( btnA3.getText().toString() == "X" && btnB3.getText().toString() == "X"  &&
-                    btnC3.getText().toString() == "X" )
-            {
-                successMsg = nomJoueur1 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-            else if ( btnA3.getText().toString() == "0" &&
-                    btnB3.getText().toString() == "0" && btnC3.getText().toString() == "0" )
-            {
-                successMsg = nomJoueur2 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-        }
-        if ( ( btnA1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
-                btnC3.getText().toString() == "X" ) || ( btnA1.getText().toString() == "0" &&
-                btnB2.getText().toString() == "0" && btnC3.getText().toString() == "0" )  )
-        {
-            // Modification de la couleur des textes et du background du boutton
-            btnA1.setBackgroundColor(Color.WHITE);
-            btnA1.setTextColor(Color.BLACK);
-            btnB2.setBackgroundColor(Color.WHITE);
-            btnB2.setTextColor(Color.BLACK);
-            btnC3.setBackgroundColor(Color.WHITE);
-            btnC3.setTextColor(Color.BLACK);
-
-            // On met continuer à false
-            continuer = false;
-
-            // Message de succès
-            if ( btnA1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
-                    btnC3.getText().toString() == "X" )
-            {
-                successMsg = nomJoueur1 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-            else if ( btnA1.getText().toString() == "0" &&
-                    btnB2.getText().toString() == "0" && btnC3.getText().toString() == "0" )
-            {
-                successMsg = nomJoueur2 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-        }
-        if ( ( btnA3.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
-                btnC1.getText().toString() == "X" ) || ( btnA3.getText().toString() == "0" &&
-                btnB2.getText().toString() == "0" && btnC1.getText().toString() == "0" )  )
-        {
-            // Modification de la couleur des textes et du background du boutton
-            btnA3.setBackgroundColor(Color.WHITE);
-            btnA3.setTextColor(Color.BLACK);
-            btnB2.setBackgroundColor(Color.WHITE);
-            btnB2.setTextColor(Color.BLACK);
-            btnC1.setBackgroundColor(Color.WHITE);
-            btnC1.setTextColor(Color.BLACK);
-
-            // On met continuer à false
-            continuer = false;
-
-            // Message de succès
-            if ( btnA3.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
-                    btnC1.getText().toString() == "X" )
-            {
-                successMsg = nomJoueur1 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-            else if ( btnA3.getText().toString() == "0" &&
-                    btnB2.getText().toString() == "0" && btnC1.getText().toString() == "0" )
-            {
-                successMsg = nomJoueur2 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-        }
-        if ( ( btnA1.getText().toString() == "X" && btnA2.getText().toString() == "X"  &&
-                btnA3.getText().toString() == "X" ) || ( btnA1.getText().toString() == "0" &&
-                btnA2.getText().toString() == "0" && btnA3.getText().toString() == "0" )  )
-        {
-            // Modification de la couleur des textes et du background du boutton
-            btnA1.setBackgroundColor(Color.WHITE);
-            btnA1.setTextColor(Color.BLACK);
-            btnA2.setBackgroundColor(Color.WHITE);
-            btnA2.setTextColor(Color.BLACK);
-            btnA3.setBackgroundColor(Color.WHITE);
-            btnA3.setTextColor(Color.BLACK);
-
-            // On met continuer à false
-            continuer = false;
-
-            // Message de succès
-            if ( btnA1.getText().toString() == "X" && btnA2.getText().toString() == "X"  &&
-                    btnA3.getText().toString() == "X" )
-            {
-                successMsg = nomJoueur1 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-            else if ( btnA1.getText().toString() == "0" &&
-                    btnA2.getText().toString() == "0" && btnA3.getText().toString() == "0" )
-            {
-                successMsg = nomJoueur2 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-        }
-        if ( ( btnB1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
-                btnB3.getText().toString() == "X" ) || ( btnB1.getText().toString() == "0" &&
-                btnB2.getText().toString() == "0" && btnB3.getText().toString() == "0" )  )
-        {
-            // Modification de la couleur des textes et du background du boutton
-            btnB1.setBackgroundColor(Color.WHITE);
-            btnB1.setTextColor(Color.BLACK);
-            btnB2.setBackgroundColor(Color.WHITE);
-            btnB2.setTextColor(Color.BLACK);
-            btnB3.setBackgroundColor(Color.WHITE);
-            btnB3.setTextColor(Color.BLACK);
-
-            // On met continuer à false
-            continuer = false;
-
-            // Message de succès
-            if ( btnB1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
-                    btnB3.getText().toString() == "X" )
-            {
-                successMsg = nomJoueur1 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-            else if ( btnB1.getText().toString() == "0" &&
-                    btnB2.getText().toString() == "0" && btnB3.getText().toString() == "0" )
-            {
-                successMsg = nomJoueur2 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-        }
-        if ( ( btnC1.getText().toString() == "X" && btnC2.getText().toString() == "X"  &&
-                btnC3.getText().toString() == "X" ) || ( btnC1.getText().toString() == "0" &&
-                btnC2.getText().toString() == "0" && btnC3.getText().toString() == "0" )  )
-        {
-            // Modification de la couleur des textes et du background du boutton
-            btnC1.setBackgroundColor(Color.WHITE);
-            btnC1.setTextColor(Color.BLACK);
-            btnC2.setBackgroundColor(Color.WHITE);
-            btnC2.setTextColor(Color.BLACK);
-            btnC3.setBackgroundColor(Color.WHITE);
-            btnC3.setTextColor(Color.BLACK);
-
-            // On met continuer à false
-            continuer = false;
-
-            // Message de succès
-            if ( btnC1.getText().toString() == "X" && btnC2.getText().toString() == "X"  &&
-                    btnC3.getText().toString() == "X" )
-            {
-                successMsg = nomJoueur1 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-            else if ( btnC1.getText().toString() == "0" &&
-                    btnC2.getText().toString() == "0" && btnC3.getText().toString() == "0" )
-            {
-                successMsg = nomJoueur2 + " " + successMsg;
-                Toast.makeText(getApplicationContext() ,  successMsg ,
-                        Toast.LENGTH_SHORT).show();
-            }
-        }
-
-        // Redirection en cas d'égalité
+    public void equalityChecker()
+    {
         if ( btnA1.getText().toString() != "" && btnB1.getText().toString() != "" && btnC1.getText().toString() != "" &&
                 btnA2.getText().toString() != "" && btnB2.getText().toString() != "" && btnC2.getText().toString() != "" &&
                 btnA3.getText().toString() != "" && btnB3.getText().toString() != "" && btnC3.getText().toString() != ""
@@ -405,8 +173,7 @@ public class jouerActivity extends AppCompatActivity
                     btnC3.setText("");
 
                     // On réinitialise les valeurs de controle du jeu
-                    continuer = true;
-                    symbol = "0";
+                    gameInit();
 
                     // On remet rejouerBtn et retourBtn en mode invisible
                     rejouerBtn.setVisibility( View.INVISIBLE );
@@ -421,8 +188,7 @@ public class jouerActivity extends AppCompatActivity
                 public void onClick(View v)
                 {
                     // On reinitialise les variables de controle du jeu
-                    continuer = true;
-                    symbol = "0";
+                    gameInit();
 
                     // Retour a la page d'acceuil
                     Intent acceuil = new Intent( getApplicationContext() , MainActivity.class );
@@ -431,8 +197,10 @@ public class jouerActivity extends AppCompatActivity
                 }
             });
         }
+    }
 
-        // Création d'un bouton pour rediriger les joueurs vers la page prinicpale en cas de victoire
+    public void winChecker()
+    {
         if (!continuer)
         {
             // Gestion du bouton rejouer
@@ -442,8 +210,7 @@ public class jouerActivity extends AppCompatActivity
                 public void onClick(View v)
                 {
                     // On reinitialise les valeurs de controle du jeu
-                    continuer = true;
-                    symbol = "0";
+                    gameInit();
 
                     // Redirection vers l'activité de la page en conservant les anciens noms de joueurs
                     Intent replay = new Intent( getApplicationContext() , jouerActivity.class );
@@ -461,8 +228,7 @@ public class jouerActivity extends AppCompatActivity
                 public void onClick(View v)
                 {
                     // On reinitialise les variables de controle du jeu
-                    continuer = true;
-                    symbol = "0";
+                    gameInit();
 
                     // Retour a la page d'acceuil
                     Intent acceuil = new Intent( getApplicationContext() , MainActivity.class );
@@ -471,6 +237,268 @@ public class jouerActivity extends AppCompatActivity
                 }
             });
         }
+
+    }
+
+    public void gameChecker()
+    {
+        if ( ( btnA1.getText().toString() == "X" && btnB1.getText().toString() == "X"  &&
+                btnC1.getText().toString() == "X" ) || ( btnA1.getText().toString() == "0" &&
+                btnB1.getText().toString() == "0" && btnC1.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnA1.setBackgroundColor(Color.WHITE);
+            btnA1.setTextColor(Color.BLACK);
+            btnB1.setBackgroundColor(Color.WHITE);
+            btnB1.setTextColor(Color.BLACK);
+            btnC1.setBackgroundColor(Color.WHITE);
+            btnC1.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            if ( btnA1.getText().toString() == "X" && btnB1.getText().toString() == "X"  &&
+                    btnC1.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+            else if ( btnA1.getText().toString() == "0" &&
+                    btnB1.getText().toString() == "0" && btnC1.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+
+        }
+        if ( ( btnA2.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                btnC2.getText().toString() == "X" ) || ( btnA2.getText().toString() == "0" &&
+                btnB2.getText().toString() == "0" && btnC2.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnA2.setBackgroundColor(Color.WHITE);
+            btnA2.setTextColor(Color.BLACK);
+            btnB2.setBackgroundColor(Color.WHITE);
+            btnB2.setTextColor(Color.BLACK);
+            btnC2.setBackgroundColor(Color.WHITE);
+            btnC2.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            if ( btnA2.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                    btnC2.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+            else if ( btnA2.getText().toString() == "0" &&
+                    btnB2.getText().toString() == "0" && btnC2.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+
+        }
+        if ( ( btnA3.getText().toString() == "X" && btnB3.getText().toString() == "X"  &&
+                btnC3.getText().toString() == "X" ) || ( btnA3.getText().toString() == "0" &&
+                btnB3.getText().toString() == "0" && btnC3.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnA3.setBackgroundColor(Color.WHITE);
+            btnA3.setTextColor(Color.BLACK);
+            btnB3.setBackgroundColor(Color.WHITE);
+            btnB3.setTextColor(Color.BLACK);
+            btnC3.setBackgroundColor(Color.WHITE);
+            btnC3.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            if ( btnA3.getText().toString() == "X" && btnB3.getText().toString() == "X"  &&
+                    btnC3.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+            else if ( btnA3.getText().toString() == "0" &&
+                    btnB3.getText().toString() == "0" && btnC3.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+        }
+        if ( ( btnA1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                btnC3.getText().toString() == "X" ) || ( btnA1.getText().toString() == "0" &&
+                btnB2.getText().toString() == "0" && btnC3.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnA1.setBackgroundColor(Color.WHITE);
+            btnA1.setTextColor(Color.BLACK);
+            btnB2.setBackgroundColor(Color.WHITE);
+            btnB2.setTextColor(Color.BLACK);
+            btnC3.setBackgroundColor(Color.WHITE);
+            btnC3.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            if ( btnA1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                    btnC3.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+            else if ( btnA1.getText().toString() == "0" &&
+                    btnB2.getText().toString() == "0" && btnC3.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+        }
+        if ( ( btnA3.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                btnC1.getText().toString() == "X" ) || ( btnA3.getText().toString() == "0" &&
+                btnB2.getText().toString() == "0" && btnC1.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnA3.setBackgroundColor(Color.WHITE);
+            btnA3.setTextColor(Color.BLACK);
+            btnB2.setBackgroundColor(Color.WHITE);
+            btnB2.setTextColor(Color.BLACK);
+            btnC1.setBackgroundColor(Color.WHITE);
+            btnC1.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            if ( btnA3.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                    btnC1.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+            else if ( btnA3.getText().toString() == "0" &&
+                    btnB2.getText().toString() == "0" && btnC1.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+        }
+        if ( ( btnA1.getText().toString() == "X" && btnA2.getText().toString() == "X"  &&
+                btnA3.getText().toString() == "X" ) || ( btnA1.getText().toString() == "0" &&
+                btnA2.getText().toString() == "0" && btnA3.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnA1.setBackgroundColor(Color.WHITE);
+            btnA1.setTextColor(Color.BLACK);
+            btnA2.setBackgroundColor(Color.WHITE);
+            btnA2.setTextColor(Color.BLACK);
+            btnA3.setBackgroundColor(Color.WHITE);
+            btnA3.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            if ( btnA1.getText().toString() == "X" && btnA2.getText().toString() == "X"  &&
+                    btnA3.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+            else if ( btnA1.getText().toString() == "0" &&
+                    btnA2.getText().toString() == "0" && btnA3.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+        }
+        if ( ( btnB1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                btnB3.getText().toString() == "X" ) || ( btnB1.getText().toString() == "0" &&
+                btnB2.getText().toString() == "0" && btnB3.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnB1.setBackgroundColor(Color.WHITE);
+            btnB1.setTextColor(Color.BLACK);
+            btnB2.setBackgroundColor(Color.WHITE);
+            btnB2.setTextColor(Color.BLACK);
+            btnB3.setBackgroundColor(Color.WHITE);
+            btnB3.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            if ( btnB1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
+                    btnB3.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+            else if ( btnB1.getText().toString() == "0" &&
+                    btnB2.getText().toString() == "0" && btnB3.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+        }
+        if ( ( btnC1.getText().toString() == "X" && btnC2.getText().toString() == "X"  &&
+                btnC3.getText().toString() == "X" ) || ( btnC1.getText().toString() == "0" &&
+                btnC2.getText().toString() == "0" && btnC3.getText().toString() == "0" )  )
+        {
+            // Modification de la couleur des textes et du background du boutton
+            btnC1.setBackgroundColor(Color.WHITE);
+            btnC1.setTextColor(Color.BLACK);
+            btnC2.setBackgroundColor(Color.WHITE);
+            btnC2.setTextColor(Color.BLACK);
+            btnC3.setBackgroundColor(Color.WHITE);
+            btnC3.setTextColor(Color.BLACK);
+
+            // On met continuer à false
+            continuer = false;
+
+            // Message de succès
+            if ( btnC1.getText().toString() == "X" && btnC2.getText().toString() == "X"  &&
+                    btnC3.getText().toString() == "X" )
+            {
+                successMsg = nomJoueur1 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+            else if ( btnC1.getText().toString() == "0" &&
+                    btnC2.getText().toString() == "0" && btnC3.getText().toString() == "0" )
+            {
+                successMsg = nomJoueur2 + " " + successMsg;
+                gameMessage( successMsg );
+            }
+        }
+
+        // Redirection en cas d'égalité
+        equalityChecker();
+
+        // Création d'un bouton pour rediriger les joueurs vers la page prinicpale en cas de victoire
+        winChecker();
+
+    }
+
+
+    public  void gameFunction( View v , String name )
+    {
+        // Gestion de la saisie
+        symbolManager();
+
+        // Gestion d'effets sur les noms de joueurs suivant la valeur de symbol
+        playerNamesManager();
+
+        // Ecriture dans le bouton
+        buttonValueProcessor( name );
+
+        // Gestion de la fin de la partie
+        gameChecker();
 
     }
 
@@ -496,6 +524,10 @@ public class jouerActivity extends AppCompatActivity
         // Définition des text views de symbols
         symbolX = findViewById(R.id.symbolX);
         symbolO = findViewById(R.id.symbolO);
+
+        // On met la coloration du joueur 1 au violet
+        joueur1Text.setTextColor(active);
+        symbolX.setTextColor(active);
 
         // Définition du bouton retour
         retourBtn = findViewById(R.id.retourBtn);
