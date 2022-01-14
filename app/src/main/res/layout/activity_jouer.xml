@@ -188,9 +188,20 @@
     <LinearLayout
         android:id="@+id/retourLayout"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="185dp"
         android:backgroundTint="#CC8585"
         android:orientation="vertical">
+
+        <Button
+            android:id="@+id/rejouerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#F4EFEF"
+            android:text="Rejouer"
+            android:textColor="@color/black"
+            android:textSize="@dimen/btnSize" />
 
         <Button
             android:id="@+id/retourBtn"

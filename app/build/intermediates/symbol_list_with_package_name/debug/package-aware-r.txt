@@ -2187,6 +2187,7 @@ id quitterBtn
 id radio
 id ratio
 id rectangles
+id rejouerBtn
 id retourBtn
 id retourLayout
 id reverseSawtooth

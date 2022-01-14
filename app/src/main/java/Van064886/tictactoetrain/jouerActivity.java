@@ -35,6 +35,9 @@ public class jouerActivity extends AppCompatActivity
     // Déclaration du bouton retour
     private Button retourBtn ;
 
+    // Déclaration du bouton rejouer
+    private Button rejouerBtn;
+
     // Déclaration du symbole a inscire
     private static String symbol = "0";
 
@@ -375,16 +378,91 @@ public class jouerActivity extends AppCompatActivity
             }
         }
 
-        // Création d'un bouton pour rediriger les joueurs vers la page prinicpale
-        if (!continuer)
+        // Redirection en cas d'égalité
+        if ( btnA1.getText().toString() != "" && btnB1.getText().toString() != "" && btnC1.getText().toString() != "" &&
+                btnA2.getText().toString() != "" && btnB2.getText().toString() != "" && btnC2.getText().toString() != "" &&
+                btnA3.getText().toString() != "" && btnB3.getText().toString() != "" && btnC3.getText().toString() != ""
+                && continuer )
         {
+            // Message pour signaler l'égalité
+            Toast.makeText( getApplicationContext() , "Aucun vainqueur" , Toast.LENGTH_SHORT ).show();
+
+            // Gestion du bouton rejouer
+            rejouerBtn.setVisibility(View.VISIBLE);
+            rejouerBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    // On vide la zone de jeu
+                    btnA1.setText("");
+                    btnA2.setText("");
+                    btnA3.setText("");
+                    btnB1.setText("");
+                    btnB2.setText("");
+                    btnB3.setText("");
+                    btnC1.setText("");
+                    btnC2.setText("");
+                    btnC3.setText("");
+
+                    // On réinitialise les valeurs de controle du jeu
+                    continuer = true;
+                    symbol = "0";
+
+                    // On remet rejouerBtn et retourBtn en mode invisible
+                    rejouerBtn.setVisibility( View.INVISIBLE );
+                    retourBtn.setVisibility( View.INVISIBLE );
+                }
+            });
+
+            // Gestion du bouton retour
             retourBtn.setVisibility(View.VISIBLE);
             retourBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v)
                 {
-                    // On reinitialise continuer a true
+                    // On reinitialise les variables de controle du jeu
                     continuer = true;
+                    symbol = "0";
+
+                    // Retour a la page d'acceuil
+                    Intent acceuil = new Intent( getApplicationContext() , MainActivity.class );
+                    startActivity(acceuil);
+                    finish();
+                }
+            });
+        }
+
+        // Création d'un bouton pour rediriger les joueurs vers la page prinicpale en cas de victoire
+        if (!continuer)
+        {
+            // Gestion du bouton rejouer
+            rejouerBtn.setVisibility(View.VISIBLE);
+            rejouerBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    // On reinitialise les valeurs de controle du jeu
+                    continuer = true;
+                    symbol = "0";
+
+                    // Redirection vers l'activité de la page en conservant les anciens noms de joueurs
+                    Intent replay = new Intent( getApplicationContext() , jouerActivity.class );
+                    replay.putExtra("joueur1Name" , nomJoueur1);
+                    replay.putExtra("joueur2Name" , nomJoueur2);
+                    startActivity(replay);
+                    finish();
+                }
+            });
+
+            // Gestion du bouton retour
+            retourBtn.setVisibility(View.VISIBLE);
+            retourBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    // On reinitialise les variables de controle du jeu
+                    continuer = true;
+                    symbol = "0";
 
                     // Retour a la page d'acceuil
                     Intent acceuil = new Intent( getApplicationContext() , MainActivity.class );
@@ -419,9 +497,13 @@ public class jouerActivity extends AppCompatActivity
         symbolX = findViewById(R.id.symbolX);
         symbolO = findViewById(R.id.symbolO);
 
-        // Définition du layout contenant le bouton retour
+        // Définition du bouton retour
         retourBtn = findViewById(R.id.retourBtn);
         retourBtn.setVisibility(View.INVISIBLE);
+
+        // Définition du bouton rejouer
+        rejouerBtn = findViewById(R.id.rejouerBtn);
+        rejouerBtn.setVisibility(View.INVISIBLE);
 
         // Gestion des évènements
         btnA1 = findViewById(R.id.btn1);

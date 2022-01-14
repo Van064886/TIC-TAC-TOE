@@ -1,4 +1,4 @@
-#Fri Jan 14 16:52:32 CET 2022
+#Fri Jan 14 20:25:23 CET 2022
 base.2=/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
 path.2=2/classes.dex
 base.1=/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
