@@ -11,6 +11,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class jouerActivity extends AppCompatActivity
 {
     // Déclaration des boutons
@@ -23,6 +32,9 @@ public class jouerActivity extends AppCompatActivity
     private Button btnC1;
     private Button btnC2;
     private Button btnC3;
+
+    // Décaration de la variable id pour les sauvegardes
+    public static  int id = 0;
 
     // Déclaration des textviews de nom de joueur
     private TextView joueur1Text;
@@ -74,7 +86,39 @@ public class jouerActivity extends AppCompatActivity
         continuer = true;
         symbol = "0";
     }
+/*
+    public void saveScore( String winnerName ) throws JSONException {
+        int score = 1;
 
+        // Création du fichier
+        JSONObject winner = new JSONObject();
+        winner.put("nom", winner);
+        winner.put("score", score);
+
+        String winnerString =  winner.toString();
+        File file = new File( getApplicationContext().getFilesDir() , "save.JSON" );
+        FileWriter fileWriter = null;
+        try {
+            fileWriter = new FileWriter(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        try {
+            bufferedWriter.write( winnerString );
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+ */
+    public void saveScore( String winnerName )
+    {
+        JSONObject jsonObject = new JSONObject();
+        //JSONObject.put("id" , id);
+        id++;
+    }
     public void playerNamesManager()
     {
         // Modifications suivant la valeur de la variable symbol
@@ -191,7 +235,7 @@ public class jouerActivity extends AppCompatActivity
                     gameInit();
 
                     // Retour a la page d'acceuil
-                    Intent acceuil = new Intent( getApplicationContext() , MainActivity.class );
+                    Intent acceuil = new Intent( getApplicationContext() , main_activity.class );
                     startActivity(acceuil);
                     finish();
                 }
@@ -231,7 +275,7 @@ public class jouerActivity extends AppCompatActivity
                     gameInit();
 
                     // Retour a la page d'acceuil
-                    Intent acceuil = new Intent( getApplicationContext() , MainActivity.class );
+                    Intent acceuil = new Intent( getApplicationContext() , main_activity.class );
                     startActivity(acceuil);
                     finish();
                 }

@@ -25,65 +25,66 @@
 17-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:9:9-42
 18        android:supportsRtl="true"
 18-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:10:9-35
-19        android:theme="@style/Theme.TicTacToeTrain" >
-19-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:11:9-52
-20        <activity
-20-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:12:9-14:39
-21            android:name="Van064886.tictactoetrain.playersName"
-21-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:13:13-40
-22            android:exported="true" />
-22-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:14:13-36
-23        <activity
-23-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:15:9-17:39
-24            android:name="Van064886.tictactoetrain.scoreActivity"
-24-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:16:13-42
-25            android:exported="true" />
-25-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:17:13-36
-26        <activity
-26-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:18:9-20:39
-27            android:name="Van064886.tictactoetrain.jouerActivity"
-27-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:19:13-42
-28            android:exported="true" />
-28-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:20:13-36
-29        <activity
-29-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:21:9-29:20
-30            android:name="Van064886.tictactoetrain.MainActivity"
-30-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:22:13-41
-31            android:exported="true" >
-31-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:23:13-36
-32            <intent-filter>
-32-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:24:13-28:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:25:17-69
-33-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:25:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:27:17-77
-35-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:27:27-74
-36            </intent-filter>
-37        </activity>
-38
-39        <provider
-39-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-40            android:name="androidx.startup.InitializationProvider"
-40-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
-41            android:authorities="Van064886.tictactoetrain.androidx-startup"
-41-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
-42            android:exported="false" >
-42-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
-43            <meta-data
-43-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-44                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-44-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
-45                android:value="androidx.startup" />
-45-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
-46            <meta-data
-46-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/van/.gradle/caches/transforms-3/e3d5f7348f31abeaadb43deed4aab633/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-47                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-47-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/van/.gradle/caches/transforms-3/e3d5f7348f31abeaadb43deed4aab633/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-48                android:value="androidx.startup" />
-48-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/van/.gradle/caches/transforms-3/e3d5f7348f31abeaadb43deed4aab633/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-49        </provider>
-50    </application>
-51
-52</manifest>
+19        android:testOnly="true"
+20        android:theme="@style/Theme.TicTacToeTrain" >
+20-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:11:9-52
+21        <activity
+21-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:12:9-14:39
+22            android:name="Van064886.tictactoetrain.playersName"
+22-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:13:13-40
+23            android:exported="true" />
+23-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:14:13-36
+24        <activity
+24-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:15:9-17:39
+25            android:name="Van064886.tictactoetrain.scoreActivity"
+25-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:16:13-42
+26            android:exported="true" />
+26-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:17:13-36
+27        <activity
+27-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:18:9-20:39
+28            android:name="Van064886.tictactoetrain.jouerActivity"
+28-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:19:13-42
+29            android:exported="true" />
+29-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:20:13-36
+30        <activity
+30-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:21:9-29:20
+31            android:name="Van064886.tictactoetrain.main_activity"
+31-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:22:13-42
+32            android:exported="true" >
+32-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:23:13-36
+33            <intent-filter>
+33-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:24:13-28:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:25:17-69
+34-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:25:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:27:17-77
+36-->/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/AndroidManifest.xml:27:27-74
+37            </intent-filter>
+38        </activity>
+39
+40        <provider
+40-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+41            android:name="androidx.startup.InitializationProvider"
+41-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+42            android:authorities="Van064886.tictactoetrain.androidx-startup"
+42-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+43            android:exported="false" >
+43-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+44            <meta-data
+44-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+45                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+45-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+46                android:value="androidx.startup" />
+46-->[androidx.emoji2:emoji2:1.0.0] /home/van/.gradle/caches/transforms-3/8b7c53cedc320aafa8740bc99100eae7/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+47            <meta-data
+47-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/van/.gradle/caches/transforms-3/e3d5f7348f31abeaadb43deed4aab633/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+48                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+48-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/van/.gradle/caches/transforms-3/e3d5f7348f31abeaadb43deed4aab633/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+49                android:value="androidx.startup" />
+49-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/van/.gradle/caches/transforms-3/e3d5f7348f31abeaadb43deed4aab633/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+50        </provider>
+51    </application>
+52
+53</manifest>

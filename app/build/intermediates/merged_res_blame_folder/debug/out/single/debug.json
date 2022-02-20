@@ -20,12 +20,12 @@
         "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
-    },
-    {
         "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/layout_activity_score.xml.flat",
         "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/layout/activity_score.xml"
+    },
+    {
+        "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
         "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
@@ -56,12 +56,12 @@
         "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
-    },
-    {
         "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
     },
     {
         "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/drawable_logo3.png.flat",

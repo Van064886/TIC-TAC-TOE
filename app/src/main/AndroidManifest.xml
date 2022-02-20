@@ -19,7 +19,7 @@
             android:name=".jouerActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".main_activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
