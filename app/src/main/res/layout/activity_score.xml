@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     android:background="#070707"
     tools:context=".scoreActivity">
-
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:gravity="center"
-        android:layout_height="96dp"
-        android:layout_weight="1"
-        android:textColor="@color/violet"
-        android:textSize="@dimen/btnSize"
-        android:fontFamily="monospace"
-        android:text="SCORES" />
     
     <ListView
         android:layout_width="match_parent"

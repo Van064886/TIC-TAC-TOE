@@ -56,12 +56,12 @@
         "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
         "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/drawable_logo3.png.flat",
@@ -78,6 +78,10 @@
     {
         "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/layout_score_item.xml.flat",
+        "source": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/src/main/res/layout/score_item.xml"
     },
     {
         "merged": "/home/van/AndroidStudioProjects/TicTacToeTrain/app/build/intermediates/merged_res/debug/mipmap-hdpi_logo3.png.flat",

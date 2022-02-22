@@ -1987,6 +1987,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id dateGame
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2034,6 +2035,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id firstSection
 id fitToContents
 id fixed
 id flip
@@ -2058,6 +2060,7 @@ id honorRequest
 id horizontal_only
 id icon
 id icon_group
+id identifier
 id ifRoom
 id ignore
 id ignoreRequest
@@ -2179,6 +2182,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id players
 id position
 id postLayout
 id progress_circular
@@ -2201,6 +2205,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scoreList
 id scoresBtn
 id screen
 id scroll
@@ -2288,7 +2293,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textView3
 id textView4
 id textViewJoueur2
@@ -2332,6 +2336,7 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id west
+id winner
 id withText
 id withinBounds
 id wrap
@@ -2476,6 +2481,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout score_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

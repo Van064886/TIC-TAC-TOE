@@ -20,6 +20,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import java.util.Date;
+
 public class jouerActivity extends AppCompatActivity
 {
     // Déclaration des boutons
@@ -32,6 +34,12 @@ public class jouerActivity extends AppCompatActivity
     private Button btnC1;
     private Button btnC2;
     private Button btnC3;
+
+    // Déclaration d'une variable db
+    public static DatabaseManager databaseManager;
+
+    // Déclaratin d'une variable pour le nom du vainqueur
+    public static String winner;
 
     // Décaration de la variable id pour les sauvegardes
     public static  int id = 0;
@@ -85,6 +93,12 @@ public class jouerActivity extends AppCompatActivity
     {
         continuer = true;
         symbol = "0";
+    }
+
+    // Fontion de sauvegarde du score basé sur SQLite
+    public void sqlSave( String winnerName )
+    {
+
     }
 /*
     public void saveScore( String winnerName ) throws JSONException {
@@ -198,6 +212,7 @@ public class jouerActivity extends AppCompatActivity
         {
             // Message pour signaler l'égalité
             Toast.makeText( getApplicationContext() , "Aucun vainqueur" , Toast.LENGTH_SHORT ).show();
+            databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , "Aucun vainqueur");
 
             // Gestion du bouton rejouer
             rejouerBtn.setVisibility(View.VISIBLE);
@@ -307,12 +322,14 @@ public class jouerActivity extends AppCompatActivity
             {
                 successMsg = nomJoueur1 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur1 );
             }
             else if ( btnA1.getText().toString() == "0" &&
                     btnB1.getText().toString() == "0" && btnC1.getText().toString() == "0" )
             {
                 successMsg = nomJoueur2 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur2 );
             }
 
         }
@@ -337,12 +354,14 @@ public class jouerActivity extends AppCompatActivity
             {
                 successMsg = nomJoueur1 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur1 );
             }
             else if ( btnA2.getText().toString() == "0" &&
                     btnB2.getText().toString() == "0" && btnC2.getText().toString() == "0" )
             {
                 successMsg = nomJoueur2 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur2 );
             }
 
         }
@@ -367,12 +386,14 @@ public class jouerActivity extends AppCompatActivity
             {
                 successMsg = nomJoueur1 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur1 );
             }
             else if ( btnA3.getText().toString() == "0" &&
                     btnB3.getText().toString() == "0" && btnC3.getText().toString() == "0" )
             {
                 successMsg = nomJoueur2 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur2 );
             }
         }
         if ( ( btnA1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
@@ -396,12 +417,14 @@ public class jouerActivity extends AppCompatActivity
             {
                 successMsg = nomJoueur1 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur1 );
             }
             else if ( btnA1.getText().toString() == "0" &&
                     btnB2.getText().toString() == "0" && btnC3.getText().toString() == "0" )
             {
                 successMsg = nomJoueur2 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur2 );
             }
         }
         if ( ( btnA3.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
@@ -425,12 +448,14 @@ public class jouerActivity extends AppCompatActivity
             {
                 successMsg = nomJoueur1 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur1 );
             }
             else if ( btnA3.getText().toString() == "0" &&
                     btnB2.getText().toString() == "0" && btnC1.getText().toString() == "0" )
             {
                 successMsg = nomJoueur2 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur2 );
             }
         }
         if ( ( btnA1.getText().toString() == "X" && btnA2.getText().toString() == "X"  &&
@@ -454,12 +479,14 @@ public class jouerActivity extends AppCompatActivity
             {
                 successMsg = nomJoueur1 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur1 );
             }
             else if ( btnA1.getText().toString() == "0" &&
                     btnA2.getText().toString() == "0" && btnA3.getText().toString() == "0" )
             {
                 successMsg = nomJoueur2 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur2 );
             }
         }
         if ( ( btnB1.getText().toString() == "X" && btnB2.getText().toString() == "X"  &&
@@ -483,12 +510,14 @@ public class jouerActivity extends AppCompatActivity
             {
                 successMsg = nomJoueur1 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur1 );
             }
             else if ( btnB1.getText().toString() == "0" &&
                     btnB2.getText().toString() == "0" && btnB3.getText().toString() == "0" )
             {
                 successMsg = nomJoueur2 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur2 );
             }
         }
         if ( ( btnC1.getText().toString() == "X" && btnC2.getText().toString() == "X"  &&
@@ -512,12 +541,14 @@ public class jouerActivity extends AppCompatActivity
             {
                 successMsg = nomJoueur1 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur1 );
             }
             else if ( btnC1.getText().toString() == "0" &&
                     btnC2.getText().toString() == "0" && btnC3.getText().toString() == "0" )
             {
                 successMsg = nomJoueur2 + " " + successMsg;
                 gameMessage( successMsg );
+                databaseManager.insertScore(nomJoueur1 +" VS "+ nomJoueur2 , nomJoueur2 );
             }
         }
 
@@ -580,6 +611,9 @@ public class jouerActivity extends AppCompatActivity
         // Définition du bouton rejouer
         rejouerBtn = findViewById(R.id.rejouerBtn);
         rejouerBtn.setVisibility(View.INVISIBLE);
+
+        // Variable db
+        databaseManager = new DatabaseManager(this);
 
         // Gestion des évènements
         btnA1 = findViewById(R.id.btn1);
